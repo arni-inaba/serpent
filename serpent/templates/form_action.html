@@ -1,0 +1,23 @@
+ <html>
+    <head>
+        <title>Whisper to me</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1></h1>
+            </div>
+            <div id="content">
+                {% if success %}
+                  Your message was posted to {{channel}}.
+                {% else %}
+                  Failed to post message!
+                {% endif %}
+                <br>
+                <a href="/">Go back</a>
+            </div>
+
+        </div>
+    </body>
+</html>
